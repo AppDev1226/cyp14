@@ -86,7 +86,7 @@ class SetupTest extends \PHPUnit_Framework_TestCase
 ?>
 
 
-1.8 在終端機視窗輸入下列指令，試用單元測試環是否安裝妥當: 
+1.8 在終端機視窗輸入下列指令，測試看看 PHPUnit 是否安裝妥當: 
 vendor/bin/phpunit
 
     <Note> 一切正常的話, 畫面訊息如下，OK那行應該是綠底文字:
@@ -100,8 +100,9 @@ vendor/bin/phpunit
 
 
 1.Q 請回答下列問題
+
     (1) 要進行單元測試，應該輸入什麼指令?
-    (2) phpunit 怎麼知道要執行哪些測試程式?
+    (2) PHPUnit 怎麼知道要執行哪些測試程式?
     (3) 測試程式的檔名、類別名稱、方法名稱有命名慣例嗎?
 
 
@@ -120,7 +121,8 @@ vendor/bin/phpunit
     
 2.3 在終端機視窗輸入下列指令:
 vendor/bin/phpunit ./myProject/Test/SetupTest.php
-    <Note> 畫面出現 PHPUnit 結果報告
+
+    <Note> 畫面出現 PHPUnit 測試報告
 
 
 2.4 重新命名 Xphpunit.xml
@@ -132,7 +134,9 @@ vendor/bin/phpunit ./myProject/Test/SetupTest.php
 
 
 2.6 在終端機視窗輸入「vendor/bin/phpunit」
-    <Note> 畫面出現 PHPUnit 結果報告
+
+    <Note> 畫面出現 PHPUnit 測試報告
+
     <Note> 你認為哪一種方式比較好? 參數或者是設定檔?
 
 
@@ -141,16 +145,18 @@ vendor/bin/phpunit ./myProject/Test/SetupTest.php
 
 
 2.8 在終端機視窗輸入「vendor/bin/phpunit」
+
     <Note> 畫面訊息顯示 PHPUnit 找不到測試方法:
     1) Warning
     No tests found in class "myProject\Test\SetupTest".
 
 
 2.9 編輯 myProject/Test/SetupTest.txt, 將
-    tryAssertTrue() 改回 testAssertTrue
+    tryAssertTrue() 改回 testAssertTrue()
 
 
 2.Q 請回答下列問題
+
     (1) 要進行單元測試，應該輸入什麼指令?
     (2) phpunit 怎麼知道要執行哪些測試程式?
     (3) 測試程式的檔名、類別名稱、方法名稱有命名慣例嗎?
@@ -221,20 +227,20 @@ class ToolTest extends \PHPUnit_Framework_TestCase {
 
 
 3.3 在終端機視窗輸入「vendor/bin/phpunit」
+
     <Note> 訊息最後一行是綠色的: 
     OK (2 tests, 2 assertions)
 
 
 3.4 修改 $expectedResult = "*****"; 故意少一個星號，
     重新在終端機視窗輸入「vendor/bin/phpunit」
+
     <Note> 訊息最後兩行是紅色的:
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
 
 3.5 修改 ToolTest.php, 新版程式如下:
-    <Note> 改回五個星號，此外，
-    也測一下當 count 參數太小時，程式的反應是否符合預期
 
 <?php
 
@@ -272,12 +278,19 @@ class ToolTest extends \PHPUnit_Framework_TestCase {
 
 ?>
 
+
+    <Note> 改回五個星號，此外，
+    也測一下當 count 參數太小時，程式的反應是否符合預期
+
+
 3.6 在終端機視窗輸入「vendor/bin/phpunit」
+
     <Note> 訊息最後一行是綠色的:
     OK (3 tests, 3 assertions)
 
 
 3.Q 請回答下列問題
+
     (1) 測試類別繼承自哪一個基礎類別?
     (2) 測試程式的方法如何命名?
     (3) 什麼是 assertion?
@@ -334,7 +347,7 @@ class ToolTest extends \PHPUnit_Framework_TestCase {
 
 
 
-5.  程式有完整測試嗎? coverage 分析
+5.  程式有經過完整測試嗎? coverage 分析
 
 
 5.1 在終端視窗輸入下列指令:
