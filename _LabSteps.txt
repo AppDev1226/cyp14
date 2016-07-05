@@ -6,6 +6,10 @@
 1.  安裝與試用 PHPUnit
 
 
+1.0 滑鼠右鍵點按你的 Workspace | New Folder，
+    新資料夾名稱: Lab_UnitTest
+
+
 1.1 啟動 Cloud9 IDE
     滑鼠右鍵點按 Lab_UnitTest | 選擇 Open Terminal Here
 
